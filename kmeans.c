@@ -151,8 +151,7 @@ float kmeans(int N, int K, datapoint *dp, datapoint *cc, float *d,
 	}
 	
 	// Find error according to this iteration's calculation of cluster 
-	// centres.  Compare with the last iteration's to check for 
-	// convergence.
+	// centres.
 	error = 0.0;
 	
 	for (n = 0; n<N; n++)
@@ -339,6 +338,7 @@ int main()
 	iter = 0;
 	e = 0.0;
 	
+	// Repeat K-means clustering until convergence is reached.
 	do
 	{
 		eOld = e;

@@ -13,7 +13,7 @@ The code requires three input files:
 
 To run kmeans.c, ensure that these are present, then in a console:
 
-$ make
+$ make  
 $ ./kmeans
 
 

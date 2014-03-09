@@ -173,13 +173,17 @@ void saveData(FILE *cFile, FILE *aFile, int N, int K, int *r,
 {
 	int n, k;
 	
-	// Write out data point assignments
+	// Write out data point assignments.
 	for (n=0; n<N; n++)
 	{
 		fprintf(aFile, "%i\n", r[n]);
 	}
 	
-	// Write out cluster centroids
+	// Write out cluster centroids.
+	// Note that assignments are calculated using the previous 
+	// iteration's centroids; if plotting assigned data, must correct 
+	// for this by writing initial centroids to top of cFile, and 
+	// discarding last set of centroids.
 	for (k=0; k<K; k++)
 	{
 		fprintf(cFile, "%f, %f\n", cc[k].x, cc[k].y);

@@ -5,10 +5,10 @@ Performs K-means clustering on 2-D floating point data until convergence.
 Currently, cluster centroids must be specified externally in "initialCentroids.csv".  
 Plan on adding function for Forgy initialisation in future.
 
-The code requires three input files: 
--- "input.csv", which contains the input data
--- "initialCentroids.csv" which contains the initial cluster centroids
--- "names.txt", which contains the names of the clusters
+The code requires three input files:  
+-- "input.csv", which contains the input data  
+-- "initialCentroids.csv" which contains the initial cluster centroids  
+-- "names.txt", which contains the names of the clusters  
 
 
 To run kmeans.c, ensure that these are present, then in a console:
